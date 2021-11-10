@@ -27,6 +27,9 @@ namespace MetroFramework
     {
         Default,
         Light,
-        Dark
+        Dark,
+        ListView_EVG,
+        LogBox_EVG
+
     }
 }

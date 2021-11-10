@@ -141,15 +141,21 @@ namespace MetroFramework
 
         static Color _custom = Color.FromArgb(225, 195, 143);
 
+        public static Color customColor = new Color();
+
         public static Color Custom
         {
+            //get
+            //{
+            //    return _custom;
+            //}
+            //set
+            //{
+            //    _custom = value;
+            //}
             get
             {
-                return _custom;
-            }
-            set
-            {
-                _custom = value;
+                return customColor;
             }
         }
     }

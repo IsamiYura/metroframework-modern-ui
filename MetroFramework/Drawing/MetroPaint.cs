@@ -41,6 +41,8 @@ namespace MetroFramework.Drawing
         }
     }
 
+
+    //Modify color change here
     public sealed class MetroPaint
     {
         public sealed class BorderColor
@@ -235,6 +237,10 @@ namespace MetroFramework.Drawing
             {
                 if (theme == MetroThemeStyle.Dark)
                     return Color.FromArgb(17, 17, 17);
+                if (theme == MetroThemeStyle.ListView_EVG)
+                    return Color.FromArgb(255, 255, 255);
+                if (theme == MetroThemeStyle.LogBox_EVG)
+                    return Color.FromArgb(255, 255, 255);
 
                 return Color.FromArgb(255, 255, 255);
             }
@@ -355,24 +361,36 @@ namespace MetroFramework.Drawing
                     {
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(51, 51, 51);
+                        else if (theme == MetroThemeStyle.ListView_EVG)
+                            return Color.FromArgb(130, 130, 130);
+                        else if (theme == MetroThemeStyle.LogBox_EVG)
+                            return Color.FromArgb(255, 255, 255);
 
-                        return Color.FromArgb(221, 221, 221);
+                        return Color.FromArgb(130, 130, 130);
                     }
 
                     public static Color Hover(MetroThemeStyle theme)
                     {
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(204, 204, 204);
+                        else if (theme == MetroThemeStyle.ListView_EVG)
+                            return Color.FromArgb(111, 111, 111);
+                        else if (theme == MetroThemeStyle.LogBox_EVG)
+                            return Color.FromArgb(255, 255, 255);
 
-                        return Color.FromArgb(96, 96, 96);
+                        return Color.FromArgb(111, 111, 111);
                     }
 
                     public static Color Press(MetroThemeStyle theme)
                     {
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(204, 204, 204);
+                        else if (theme == MetroThemeStyle.ListView_EVG)
+                            return Color.FromArgb(255, 255, 255);
+                        else if (theme == MetroThemeStyle.LogBox_EVG)
+                            return Color.FromArgb(255, 255, 255);
 
-                        return Color.FromArgb(96, 96, 96);
+                        return Color.FromArgb(255, 255, 255);
                     }
 
                     public static Color Disabled(MetroThemeStyle theme)
@@ -390,32 +408,49 @@ namespace MetroFramework.Drawing
                     {
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(38, 38, 38);
+                        else if (theme == MetroThemeStyle.ListView_EVG)
+                            return Color.FromArgb(255, 255, 255);
+                        else if (theme == MetroThemeStyle.LogBox_EVG)
+                            return Color.FromArgb(255, 255, 255);
 
-                        return Color.FromArgb(234, 234, 234);
+
+                        return Color.FromArgb(255, 255, 255);
                     }
 
                     public static Color Hover(MetroThemeStyle theme)
                     {
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(38, 38, 38);
+                        else if (theme == MetroThemeStyle.ListView_EVG)
+                            return Color.FromArgb(255, 255, 255);
+                        else if (theme == MetroThemeStyle.LogBox_EVG)
+                            return Color.FromArgb(255, 255, 255);
 
-                        return Color.FromArgb(234, 234, 234);
+                        return Color.FromArgb(255, 255, 255);
                     }
 
                     public static Color Press(MetroThemeStyle theme)
                     {
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(38, 38, 38);
+                        else if (theme == MetroThemeStyle.ListView_EVG)
+                            return Color.FromArgb(255, 255, 255);
+                        else if (theme == MetroThemeStyle.LogBox_EVG)
+                            return Color.FromArgb(255, 255, 255);
 
-                        return Color.FromArgb(234, 234, 234);
+                        return Color.FromArgb(255, 255, 255);
                     }
 
                     public static Color Disabled(MetroThemeStyle theme)
                     {
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(38, 38, 38);
+                        else if (theme == MetroThemeStyle.ListView_EVG)
+                            return Color.FromArgb(255, 255, 255);
+                        else if (theme == MetroThemeStyle.LogBox_EVG)
+                            return Color.FromArgb(255, 255, 255);
 
-                        return Color.FromArgb(234, 234, 234);
+                        return Color.FromArgb(255, 255, 255);
                     }
                 }
             }
@@ -750,6 +785,9 @@ namespace MetroFramework.Drawing
                 case MetroColorStyle.Yellow:
                     return MetroColors.Yellow;
 
+                case MetroColorStyle.Custom:
+                    return MetroColors.Custom;
+
                 default:
                     return MetroColors.Blue;
             }
@@ -801,6 +839,9 @@ namespace MetroFramework.Drawing
                 case MetroColorStyle.Yellow:
                     return MetroBrushes.Yellow;
 
+                case MetroColorStyle.Custom:
+                    return MetroBrushes.Custom;
+
                 default:
                     return MetroBrushes.Blue;
             }
@@ -851,6 +892,9 @@ namespace MetroFramework.Drawing
 
                 case MetroColorStyle.Yellow:
                     return MetroPens.Yellow;
+
+                case MetroColorStyle.Custom:
+                    return MetroPens.Custom;
 
                 default:
                     return MetroPens.Blue;

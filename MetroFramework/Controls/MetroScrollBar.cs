@@ -24,6 +24,7 @@
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Security;
 using System.Windows.Forms;
 using MetroFramework.Components;
@@ -596,6 +597,9 @@ namespace MetroFramework.Controls
                         backColor = MetroPaint.BackColor.Form(Theme);
                     }
                 }
+                else {
+                    backColor = Color.FromArgb(255, 255, 255);
+                }
 
                 if (backColor.A == 255)
                 {
@@ -631,6 +635,7 @@ namespace MetroFramework.Controls
             }
         }
 
+        //Event for scrollbar drawing
         protected virtual void OnPaintForeground(PaintEventArgs e)
         {
             Color backColor, thumbColor, barColor;
@@ -702,7 +707,10 @@ namespace MetroFramework.Controls
 
             using (var b = new SolidBrush(thumbColor))
             {
+                Pen pen = new Pen(Color.FromArgb(130, 130, 130), 2);
+                pen.Alignment = PenAlignment.Inset;
                 g.FillRectangle(b, thumbRectangle);
+                g.DrawRectangle(pen, thumbRectangle);
             }
         }
 
