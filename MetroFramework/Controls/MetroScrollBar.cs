@@ -707,7 +707,7 @@ namespace MetroFramework.Controls
 
             using (var b = new SolidBrush(thumbColor))
             {
-                Pen pen = new Pen(Color.FromArgb(130, 130, 130), 2);
+                Pen pen = new Pen(Color.FromArgb(130, 130, 130), 1);
                 pen.Alignment = PenAlignment.Inset;
                 g.FillRectangle(b, thumbRectangle);
                 g.DrawRectangle(pen, thumbRectangle);

@@ -237,8 +237,10 @@ namespace MetroFramework.Drawing
             {
                 if (theme == MetroThemeStyle.Dark)
                     return Color.FromArgb(17, 17, 17);
+                //for listview scrollbar
                 if (theme == MetroThemeStyle.ListView_EVG)
                     return Color.FromArgb(255, 255, 255);
+                //for logbox scrollbar
                 if (theme == MetroThemeStyle.LogBox_EVG)
                     return Color.FromArgb(255, 255, 255);
 
@@ -288,7 +290,6 @@ namespace MetroFramework.Drawing
                     {
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(153, 153, 153);
-
                         return Color.FromArgb(102, 102, 102);
                     }
 
@@ -362,9 +363,9 @@ namespace MetroFramework.Drawing
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(51, 51, 51);
                         else if (theme == MetroThemeStyle.ListView_EVG)
-                            return Color.FromArgb(130, 130, 130);
+                            return Color.FromArgb(0, 0, 0);
                         else if (theme == MetroThemeStyle.LogBox_EVG)
-                            return Color.FromArgb(255, 255, 255);
+                            return Color.FromArgb(0, 0, 0);
 
                         return Color.FromArgb(130, 130, 130);
                     }
@@ -374,7 +375,7 @@ namespace MetroFramework.Drawing
                         if (theme == MetroThemeStyle.Dark)
                             return Color.FromArgb(204, 204, 204);
                         else if (theme == MetroThemeStyle.ListView_EVG)
-                            return Color.FromArgb(111, 111, 111);
+                            return Color.FromArgb(255, 255, 255);
                         else if (theme == MetroThemeStyle.LogBox_EVG)
                             return Color.FromArgb(255, 255, 255);
 
